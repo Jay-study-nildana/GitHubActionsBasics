@@ -16,12 +16,15 @@ name: Deploy web app to Azure Static Web Apps
 
 on:
   push:
+# the following wont work
 #   branches: [ $default-branch ]
     branches: main
   pull_request:
     types: [opened, synchronize, reopened, closed]
-    branches: [ $default-branch ]
-    
+#  the following wont work    
+#   branches: [ $default-branch ]
+    branches: main
+
 
 # Environment variables available to all jobs and steps in this workflow
 env:
